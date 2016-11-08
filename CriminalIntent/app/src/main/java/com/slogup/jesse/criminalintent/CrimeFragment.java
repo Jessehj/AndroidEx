@@ -27,8 +27,8 @@ public class CrimeFragment extends Fragment {
     private CheckBox mSolvedCheckBox;
 
     @Override
-    public void onCreate(Bundle savedInstancestate) {
-        super.onCreate(savedInstancestate);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         mCrime = new Crime();
     }
 
@@ -66,7 +66,7 @@ public class CrimeFragment extends Fragment {
         mSolvedCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @Override
-            public void onCheckedChanged(CompoundButton ButtonView, boolean isChecked) {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
                 // 범죄 해결 여부 속성 값 설정.
                 mCrime.setSolved(isChecked);
