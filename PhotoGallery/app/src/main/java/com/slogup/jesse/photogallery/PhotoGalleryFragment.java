@@ -204,7 +204,8 @@ public class PhotoGalleryFragment extends VisibleFragment {
 
         @Override
         public void onClick(View v) {
-            Intent i = new Intent(Intent.ACTION_VIEW, mGalleryItem.getPhotoPageUri());
+            Intent i = PhotoPageActivity.newIntent(getActivity(), mGalleryItem.getPhotoPageUri());
+
             startActivity(i);
         }
     }
@@ -232,7 +233,7 @@ public class PhotoGalleryFragment extends VisibleFragment {
             photoHolder.bindGalleryItem(galleryItem);
            /* Drawable placeholder = getResources().getDrawable(R.drawable.bill_up_close);
             photoHolder.bindDrawable(placeholder);*/
-            
+
             mThumbnailDownloader.queueThumbnail(photoHolder, galleryItem.getUrl());
         }
 
